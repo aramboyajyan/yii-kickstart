@@ -1,0 +1,31 @@
+
+/**
+ * @file
+ * Main stylesheet file.
+ *
+ * Created by: Topsitemakers
+ * http://www.topsitemakers.com/
+ */
+
+
+/*****************************************************************************
+ * Main elements
+ ****************************************************************************/
+body {
+  font-family: "Trebuchet MS";
+  font-size: 14px;
+}
+::selection,
+::-moz-selection,
+::-webkit-selection {
+  background: #555;
+  color: #FFF;
+}
+/* Main elements end */
+
+
+/*****************************************************************************
+ * Various other styles
+ ****************************************************************************/
+
+/* Various other styles end */

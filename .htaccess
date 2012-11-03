@@ -1,0 +1,12 @@
+# Apache configuration file
+#
+# Created by: Topsitemakers
+# http://www.topsitemakers.com/
+
+# Simple rewrite rules for SEO URLs
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php
