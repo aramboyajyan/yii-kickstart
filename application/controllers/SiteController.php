@@ -15,13 +15,14 @@ class SiteController extends Controller {
 	 */
 	public function actions() {
 		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
+			// Renders the CAPTCHA image displayed on the contact page.
 			'captcha' => array(
 				'class' => 'CCaptchaAction',
 				'backColor'=>0xFFFFFF,
 			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
+			// Page action renders "static" pages stored under
+			// 'protected/views/site/pages'.
+			// Pages can be accessed via: index.php?r=site/page&view=FileName.
 			'page' => array(
 				'class' => 'CViewAction',
 			),
@@ -53,7 +54,7 @@ class SiteController extends Controller {
 	}
 
 	/**
-	 * Displays the contact page
+	 * Displays the contact page.
 	 */
 	public function actionContact() {
 		$model = new ContactForm;
@@ -70,25 +71,25 @@ class SiteController extends Controller {
 	}
 
 	/**
-	 * Displays the login page
+	 * Displays the login page.
 	 */
 	public function actionLogin() {
 		$model = new LoginForm;
-		// if it is ajax validation request
+		// If it is ajax validation request.
 		if (isset($_POST['ajax']) && $_POST['ajax']==='login-form') {
 			print CActiveForm::validate($model);
 			Yii::app()->end();
 		}
 
-		// collect user input data
+		// Collect user input data.
 		if (isset($_POST['LoginForm'])) {
 			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
+			// Validate user input and redirect to the previous page if valid.
 			if ($model->validate() && $model->login()) {
 				$this->redirect(Yii::app()->user->returnUrl);
 			}
 		}
-		// display the login form
+		// Display the login form.
 		$this->render('login',array('model'=>$model));
 	}
 

@@ -11,8 +11,9 @@
 class UserController extends Controller {
 	
 	/**
-	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
-	 * using two-column layout. See 'protected/views/layouts/column2.php'.
+	 * @var string the default layout for the views.
+	 * Defaults to '//layouts/column2', meaning using two-column layout.
+	 * See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout = '//layouts/column2';
 
@@ -21,7 +22,7 @@ class UserController extends Controller {
 	 */
 	public function filters() {
 		return array(
-			// Perform access control for CRUD operations
+			// Perform access control for CRUD operations.
 			'accessControl',
 		);
 	}
@@ -33,22 +34,22 @@ class UserController extends Controller {
 	 */
 	public function accessRules() {
 		return array(
-			// Allow all users to perform 'index' and 'view' actions
+			// Allow all users to perform 'index' and 'view' actions.
 			array('allow',
 				'actions' => array('index','view'),
 				'users' => array('*'),
 			),
-			// Allow authenticated user to perform 'create' and 'update' actions
+			// Allow authenticated user to perform 'create' and 'update' actions.
 			array('allow',
 				'actions' => array('create','update'),
 				'users' => array('@'),
 			),
-			// Allow admin user to perform 'admin' and 'delete' actions
+			// Allow admin user to perform 'admin' and 'delete' actions.
 			array('allow',
 				'actions' => array('admin','delete'),
 				'users' => array('admin'),
 			),
-			// Deny all other users
+			// Deny all other users.
 			array('deny',
 				'users' => array('*'),
 			),
@@ -68,7 +69,8 @@ class UserController extends Controller {
 
 	/**
 	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 * If creation is successful, the browser will be redirected to the 'view'
+	 * page.
 	 */
 	public function actionCreate() {
 		$model = new User;
@@ -87,7 +89,8 @@ class UserController extends Controller {
 
 	/**
 	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * If update is successful, the browser will be redirected to the 'view'
+	 * page.
 	 * @param integer $id the ID of the model to be updated
 	 */
 	public function actionUpdate($id) {
@@ -107,7 +110,8 @@ class UserController extends Controller {
 
 	/**
 	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
+	 * If deletion is successful, the browser will be redirected to the 'admin'
+	 * page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
 	public function actionDelete($id) {
@@ -115,7 +119,8 @@ class UserController extends Controller {
 			// we only allow deletion via POST request
 			$this->loadModel($id)->delete();
 
-			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+			// If AJAX request (triggered by deletion via admin grid view), we
+			// should not redirect the browser.
 			if (!isset($_GET['ajax'])) {
 				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 			}
@@ -140,7 +145,8 @@ class UserController extends Controller {
 	 */
 	public function actionAdmin() {
 		$model = new User('search');
-		$model->unsetAttributes();  // clear any default values
+	  // Clear any default values.
+		$model->unsetAttributes();
 		if (isset($_GET['User'])) {
 			$model->attributes=$_GET['User'];
 		}
@@ -151,7 +157,8 @@ class UserController extends Controller {
 	}
 
 	/**
-	 * Returns the data model based on the primary key given in the GET variable.
+	 * Returns the data model based on the primary key given in the GET
+	 * variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer the ID of the model to be loaded
 	 */

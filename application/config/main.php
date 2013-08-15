@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Main configuration
+ * Main configuration.
  *
  * Created by: Topsitemakers
  * http://www.topsitemakers.com/
@@ -12,7 +12,7 @@ return array(
 
 	/**
 	 * Application settings
-	 * Note: we renamed the default "protected" folder to "application"
+	 * Note: we renamed the default "protected" folder to "application".
 	 */
 	'basePath' => dirname(__FILE__).DIRECTORY_SEPARATOR.'../../application/',
   'runtimePath' => dirname(__FILE__).DIRECTORY_SEPARATOR.'../../application/',
@@ -20,14 +20,14 @@ return array(
   'theme' => 'classic',
   
   /**
-   * Components that should be preloaded
+   * Components that should be preloaded.
    */
 	'preload' => array(
 		'log',
 	),
   
   /**
-   * Application models and components to be imported automatically
+   * Application models and components to be imported automatically.
    */
 	'import' => array(
 		'application.models.*',
@@ -35,7 +35,7 @@ return array(
 	),
 
 	/**
-	 * Application modules
+	 * Application modules.
 	 */
 	'modules' => array(
 		'gii' => array(
@@ -46,16 +46,16 @@ return array(
 	),
 
 	/**
-	 * Application components
+	 * Application components.
 	 */
 	'components' => array(
 
-		// User settings
+		// User settings.
 		'user' => array(
 			'allowAutoLogin' => TRUE,
 		),
 
-		// Path settings
+		// Path settings.
 		'urlManager' => array(
 			'urlFormat' => 'path',
       'showScriptName' => FALSE,
@@ -66,7 +66,7 @@ return array(
 			),
 		),
 
-		// Database settings
+		// Database settings.
 		'db' => array(
 			'connectionString' => 'mysql:host=localhost;dbname=database',
 			'emulatePrepare' => TRUE,
@@ -75,12 +75,12 @@ return array(
 			'charset' => 'utf8',
 		),
 
-		// Error handling
+		// Error handling.
 		'errorHandler' => array(
       'errorAction' => 'site/error',
     ),
 
-		// Logging
+		// Logging.
 		'log' => array(
 			'class' => 'CLogRouter',
 			'routes' => array(
@@ -89,7 +89,7 @@ return array(
 					'levels' => 'error, warning',
 				),
 				/*
-				// Show log messages on web pages. Use only during development
+				// Show log messages on web pages. Use only during development.
 				array(
 					'class' => 'CWebLogRoute',
 				),

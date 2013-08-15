@@ -13,13 +13,13 @@
  */
 class Controller extends CController {
 
-	// Default layout for the application
+	// Default layout for the application.
 	public $layout = '//layouts/column1';
 	
-	// Menu items; start with an empty array
+	// Menu items; start with an empty array.
 	public $menu = array();
 	
-	// Breadcrumbs; start with an empty array
+	// Breadcrumbs; start with an empty array.
 	public $breadcrumbs = array();
 
 }

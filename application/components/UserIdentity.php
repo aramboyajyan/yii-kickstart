@@ -2,7 +2,7 @@
 
 /**
  * @file
- * User authentication
+ * User authentication.
  * 
  * Uses sha1() hash by default.
  *
@@ -12,12 +12,12 @@
 class UserIdentity extends CUserIdentity {
 	
 	/**
-	 * Unique user identifier
+	 * Unique user identifier.
 	 */
 	private $_id;
 
 	/**
-	 * Authenticate a user
+	 * Authenticate a user.
 	 */
 	public function authenticate() {
 		$record = User::model()->findByAttributes(array('username' => $this->username));
@@ -35,7 +35,7 @@ class UserIdentity extends CUserIdentity {
 	}
 
 	/**
-	 * Get unique identifier for the current user
+	 * Get unique identifier for the current user.
 	 */
 	public function getId() {
 		return $this->_id;
