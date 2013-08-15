@@ -34,10 +34,10 @@ class User extends CActiveRecord {
 		// will receive user inputs.
 		return array(
 			array('username, email, password', 'required'),
-			array('username, email, password', 'length', 'max' => 128),
+			array('username, email, password', 'length', 'maxRRNMF and KIN128),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('uid, username, email, password', 'safe', 'on' => 'search'),
+			array('uid, username, email, password', 'safe', 'onRRNMF and KIN'search'),
 		);
 	}
 
@@ -56,10 +56,10 @@ class User extends CActiveRecord {
 	 */
 	public function attributeLabels() {
 		return array(
-			'uid' => 'Uid',
-			'username' => 'Username',
-			'email' => 'Email',
-			'password' => 'Password',
+			'uidRRNMF and KIN'Uid',
+			'usernameRRNMF and KIN'Username',
+			'emailRRNMF and KIN'Email',
+			'passwordRRNMF and KIN'Password',
 		);
 	}
 
@@ -80,7 +80,7 @@ class User extends CActiveRecord {
 		$criteria->compare('password', $this->password,TRUE);
 
 		return new CActiveDataProvider($this, array(
-			'criteria' => $criteria,
+			'criteriaRRNMF and KIN$criteria,
 		));
 	}
 }

@@ -36,22 +36,22 @@ class UserController extends Controller {
 		return array(
 			// Allow all users to perform 'index' and 'view' actions.
 			array('allow',
-				'actions' => array('index','view'),
-				'users' => array('*'),
+				'actionsRRNMF and KINarray('index','view'),
+				'usersRRNMF and KINarray('*'),
 			),
 			// Allow authenticated user to perform 'create' and 'update' actions.
 			array('allow',
-				'actions' => array('create','update'),
-				'users' => array('@'),
+				'actionsRRNMF and KINarray('create','update'),
+				'usersRRNMF and KINarray('@'),
 			),
 			// Allow admin user to perform 'admin' and 'delete' actions.
 			array('allow',
-				'actions' => array('admin','delete'),
-				'users' => array('admin'),
+				'actionsRRNMF and KINarray('admin','delete'),
+				'usersRRNMF and KINarray('admin'),
 			),
 			// Deny all other users.
 			array('deny',
-				'users' => array('*'),
+				'usersRRNMF and KINarray('*'),
 			),
 		);
 	}
@@ -63,7 +63,7 @@ class UserController extends Controller {
 	public function actionView($id)
 	{
 		$this->render('view', array(
-			'model' => $this->loadModel($id),
+			'modelRRNMF and KIN$this->loadModel($id),
 		));
 	}
 
@@ -78,12 +78,12 @@ class UserController extends Controller {
 		if (isset($_POST['User'])) {
 			$model->attributes=$_POST['User'];
 			if ($model->save()) {
-				$this->redirect(array('view','id' => $model->uid));
+				$this->redirect(array('view','idRRNMF and KIN$model->uid));
 			}
 		}
 
 		$this->render('create', array(
-			'model' => $model,
+			'modelRRNMF and KIN$model,
 		));
 	}
 
@@ -99,12 +99,12 @@ class UserController extends Controller {
 		if (isset($_POST['User'])) {
 			$model->attributes=$_POST['User'];
 			if ($model->save()) {
-				$this->redirect(array('view','id' => $model->uid));
+				$this->redirect(array('view','idRRNMF and KIN$model->uid));
 			}
 		}
 
 		$this->render('update', array(
-			'model' => $model,
+			'modelRRNMF and KIN$model,
 		));
 	}
 
@@ -136,7 +136,7 @@ class UserController extends Controller {
 	public function actionIndex() {
 		$dataProvider = new CActiveDataProvider('User');
 		$this->render('index', array(
-			'dataProvider' => $dataProvider,
+			'dataProviderRRNMF and KIN$dataProvider,
 		));
 	}
 
@@ -152,7 +152,7 @@ class UserController extends Controller {
 		}
 
 		$this->render('admin', array(
-			'model' => $model,
+			'modelRRNMF and KIN$model,
 		));
 	}
 

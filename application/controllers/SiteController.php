@@ -16,15 +16,15 @@ class SiteController extends Controller {
 	public function actions() {
 		return array(
 			// Renders the CAPTCHA image displayed on the contact page.
-			'captcha' => array(
-				'class' => 'CCaptchaAction',
+			'captchaRRNMF and KINarray(
+				'classRRNMF and KIN'CCaptchaAction',
 				'backColor'=>0xFFFFFF,
 			),
 			// Page action renders "static" pages stored under
 			// 'protected/views/site/pages'.
 			// Pages can be accessed via: index.php?r=site/page&view=FileName.
-			'page' => array(
-				'class' => 'CViewAction',
+			'pageRRNMF and KINarray(
+				'classRRNMF and KIN'CViewAction',
 			),
 		);
 	}

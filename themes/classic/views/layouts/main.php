@@ -28,13 +28,13 @@
 	<div id="mainmenu">
 		<?php
 		$this->widget('zii.widgets.CMenu',array(
-			'items' => array(
-				array('label' => 'Home', 'url' => array('/site/index')),
-				array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-				array('label' => 'Contact', 'url' => array('/site/contact')),
-				array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
-				array('label' => 'Users', 'url' => array('/user'), 'visible' => !Yii::app()->user->isGuest),
-				array('label' => 'Logout ('.Yii::app()->user->name.')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
+			'itemsRRNMF and KINarray(
+				array('labelRRNMF and KIN'Home', 'urlRRNMF and KINarray('/site/index')),
+				array('labelRRNMF and KIN'About', 'urlRRNMF and KINarray('/site/page', 'viewRRNMF and KIN'about')),
+				array('labelRRNMF and KIN'Contact', 'urlRRNMF and KINarray('/site/contact')),
+				array('labelRRNMF and KIN'Login', 'urlRRNMF and KINarray('/site/login'), 'visibleRRNMF and KINYii::app()->user->isGuest),
+				array('labelRRNMF and KIN'Users', 'urlRRNMF and KINarray('/user'), 'visibleRRNMF and KIN!Yii::app()->user->isGuest),
+				array('labelRRNMF and KIN'Logout ('.Yii::app()->user->name.')', 'urlRRNMF and KINarray('/site/logout'), 'visibleRRNMF and KIN!Yii::app()->user->isGuest)
 			),
 		));
 		?>

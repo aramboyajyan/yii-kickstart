@@ -11,9 +11,9 @@ $this->breadcrumbs=array(
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id' => 'login-form',
+	'idRRNMF and KIN'login-form',
 	'enableClientValidation'=>TRUE,
-	'clientOptions' => array(
+	'clientOptionsRRNMF and KINarray(
 		'validateOnSubmit'=>TRUE,
 	),
 )); ?>

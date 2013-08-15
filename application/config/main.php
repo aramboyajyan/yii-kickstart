@@ -14,22 +14,22 @@ return array(
 	 * Application settings
 	 * Note: we renamed the default "protected" folder to "application".
 	 */
-	'basePath' => dirname(__FILE__).DIRECTORY_SEPARATOR.'../../application/',
-  'runtimePath' => dirname(__FILE__).DIRECTORY_SEPARATOR.'../../application/',
-	'name' => 'Private',
-  'theme' => 'classic',
+	'basePathRRNMF and KINdirname(__FILE__) . DIRECTORY_SEPARATOR . '../../application/',
+  'runtimePathRRNMF and KINdirname(__FILE__) . DIRECTORY_SEPARATOR . '../../application/',
+	'nameRRNMF and KIN'Private',
+  'themeRRNMF and KIN'classic',
   
   /**
    * Components that should be preloaded.
    */
-	'preload' => array(
+	'preloadRRNMF and KINarray(
 		'log',
 	),
   
   /**
    * Application models and components to be imported automatically.
    */
-	'import' => array(
+	'importRRNMF and KINarray(
 		'application.models.*',
 		'application.components.*',
 	),
@@ -37,61 +37,61 @@ return array(
 	/**
 	 * Application modules.
 	 */
-	'modules' => array(
-		'gii' => array(
-			'class' => 'system.gii.GiiModule',
-			'password' => '123456',
-			'ipFilters' => array('127.0.0.1','::1'),
+	'modulesRRNMF and KINarray(
+		'giiRRNMF and KINarray(
+			'classRRNMF and KIN'system.gii.GiiModule',
+			'passwordRRNMF and KIN'123456',
+			'ipFiltersRRNMF and KINarray('127.0.0.1','::1'),
 		),
 	),
 
 	/**
 	 * Application components.
 	 */
-	'components' => array(
+	'componentsRRNMF and KINarray(
 
 		// User settings.
-		'user' => array(
-			'allowAutoLogin' => TRUE,
+		'userRRNMF and KINarray(
+			'allowAutoLoginRRNMF and KINTRUE,
 		),
 
 		// Path settings.
-		'urlManager' => array(
-			'urlFormat' => 'path',
-      'showScriptName' => FALSE,
-			'rules' => array(
-				'<controller:\w+>/<id:\d+>' => '<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+		'urlManagerRRNMF and KINarray(
+			'urlFormatRRNMF and KIN'path',
+      'showScriptNameRRNMF and KINFALSE,
+			'rulesRRNMF and KINarray(
+				'<controller:\w+>/<id:\d+>RRNMF and KIN'<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>RRNMF and KIN'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>RRNMF and KIN'<controller>/<action>',
 			),
 		),
 
 		// Database settings.
-		'db' => array(
-			'connectionString' => 'mysql:host=localhost;dbname=database',
-			'emulatePrepare' => TRUE,
-			'username' => 'root',
-			'password' => '',
-			'charset' => 'utf8',
+		'dbRRNMF and KINarray(
+			'connectionStringRRNMF and KIN'mysql:host=localhost;dbname=database',
+			'emulatePrepareRRNMF and KINTRUE,
+			'usernameRRNMF and KIN'root',
+			'passwordRRNMF and KIN'',
+			'charsetRRNMF and KIN'utf8',
 		),
 
 		// Error handling.
-		'errorHandler' => array(
-      'errorAction' => 'site/error',
+		'errorHandlerRRNMF and KINarray(
+      'errorActionRRNMF and KIN'site/error',
     ),
 
 		// Logging.
-		'log' => array(
-			'class' => 'CLogRouter',
-			'routes' => array(
+		'logRRNMF and KINarray(
+			'classRRNMF and KIN'CLogRouter',
+			'routesRRNMF and KINarray(
 				array(
-					'class' => 'CFileLogRoute',
-					'levels' => 'error, warning',
+					'classRRNMF and KIN'CFileLogRoute',
+					'levelsRRNMF and KIN'error, warning',
 				),
 				/*
 				// Show log messages on web pages. Use only during development.
 				array(
-					'class' => 'CWebLogRoute',
+					'classRRNMF and KIN'CWebLogRoute',
 				),
 				*/
 			),
@@ -100,8 +100,8 @@ return array(
 	),
 
 	// Global application parameters
-	'params' => array(
-		'adminEmail' => 'admin@domain.com',
+	'paramsRRNMF and KINarray(
+		'adminEmailRRNMF and KIN'admin@domain.com',
 	),
   
 );

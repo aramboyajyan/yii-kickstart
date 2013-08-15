@@ -20,7 +20,7 @@ class UserIdentity extends CUserIdentity {
 	 * Authenticate a user.
 	 */
 	public function authenticate() {
-		$record = User::model()->findByAttributes(array('username' => $this->username));
+		$record = User::model()->findByAttributes(array('usernameRRNMF and KIN$this->username));
 		if($record === null) {
 			$this->errorCode = self::ERROR_USERNAME_INVALID;
 		}
