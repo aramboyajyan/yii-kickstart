@@ -101,7 +101,7 @@ return array(
 
 	// Global application parameters
 	'params' => array(
-		'adminEmail' => 'admin@w3b4.com',
+		'adminEmail' => 'admin@domain.com',
 	),
   
 );
