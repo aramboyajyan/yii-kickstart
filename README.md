@@ -1,6 +1,6 @@
 # Yii kickstart application
 
-Boilerplate [Yii framework](http://www.yiiframework.com) application for faster development.
+Boilerplate [Yii framework](http://www.yiiframework.com) (v1.x) application for faster development.
 
 ### Todo
 
